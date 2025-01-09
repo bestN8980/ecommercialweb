@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wine Horse</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div
+      class="h-10 w-auto bg-[#000000] text-[#ffffff] flex justify-between items-center"
+    >
+      <div class="m-5 md:block hidden">
+        <i class="fa-solid fa-location-dot text-[orange] mr-3"></i>Tầng 6 - Tòa
+        nhà Ladeco - 266 Đội Cấn, Hà Nội,
+      </div>
+      <div class="m-5 flex justify-between items-center w-full md:w-auto">
+        <div class="flex">
+          <button class="px-3">
+            <i class="fa-solid fa-lock text-[orange] mr-2"></i>Đăng ký
+          </button>
+          <button class="px-3">
+            <i class="fa-solid fa-user text-[orange] mr-2"></i>Đăng nhập
+          </button>
+        </div>
+        <div class="ml-auto">
+          <button class="px-3">
+            <i class="fa-solid fa-magnifying-glass text-[#ffffff]"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-around items-center">
+      <button
+        class="menu md:hidden lg:hidden text-3xl cursor-pointer hover:text-[orange]"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="md:flex hidden">
+        <a class="mr-5 hover:cursor-pointer hover:text-[orange]"> TRANG CHỦ </a>
+        <a class="mr-5 hover:cursor-pointer hover:text-[orange]">
+          GIỚI THIỆU
+        </a>
+      </div>
+      <img src="../picture/logo.webp" alt="logo" />
+      <div class="md:flex hidden">
+        <a class="hover-menu mr-5 hover:cursor-pointer hover:text-[orange]">
+          SẢN PHẨM >
+        </a>
+        <a class="mr-5 hover:cursor-pointer hover:text-[orange]">TIN TỨC</a>
+      </div>
+      <a href="../checkout/buy.html">
+        <i
+          class="fa-solid fa-bag-shopping text-3xl cursor-pointer hover:text-[orange]"
+        ></i>
+      </a>
+    </div>
+    <div class="render-menu border-2 hidden">
+      <a
+        class="text-[20px] ml-10 hover:text-[orange] block hover:cursor-pointer"
+        >TRANG CHỦ</a
+      >
+      <a
+        class="text-[20px] ml-10 hover:text-[orange] block hover:cursor-pointer"
+        >GIỚI THIỆU</a
+      >
+      <a
+        class="text-[20px] ml-10 hover:text-[orange] block hover:cursor-pointer"
+        >SẢN PHẨM</a
+      >
+      <a
+        class="text-[20px] ml-10 hover:text-[orange] block hover:cursor-pointer"
+        >TIN TỨC</a
+      >
+    </div>
+    <img src="../picture/slider_1.webp" alt="slider1" />
+    <div class="flex justify-center">
+      <img src="../picture/banner2_1.webp" alt="banner2_1" />
+      <img src="../picture/banner2_2.webp" alt="banner2_2" />
+    </div>
+    <div class="text-center pt-[80px] text-[25px]">ĐƯỢC ƯA THÍCH NHẤT</div>
+    <div
+      class="render-favorite ml-36 mr-36 grid grid-cols-1 md:grid-cols-4"
+    ></div>
+    <script src="script.js"></script>
+  </body>
+</html>

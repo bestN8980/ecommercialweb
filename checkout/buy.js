@@ -1,8 +1,9 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-let divCart = document.querySelector(".cart");
+let divCart1 = document.querySelector(".cart");
+let divCart2 = document.querySelector(".cart-in-small-screen");
 
-const renderCart = () => {
-  divCart.innerHTML = `
+const renderCart1 = () => {
+  let cartContent = `
     <div>Ảnh</div>
     <div>Tên sản phẩm</div>
     <div>Đơn giá</div>
@@ -14,7 +15,7 @@ const renderCart = () => {
   cart.forEach((item, index) => {
     let renderItem = `
       <div class="w-14 h-16">
-        <img src="${item.scr}" alt="product" />
+        <img src="${item.src}" alt="product" />
       </div>
       <div>${item.name}</div>
       <div>${item.price}</div>
@@ -24,18 +25,63 @@ const renderCart = () => {
         <i class="fa-solid fa-xmark"></i>
       </button>
     `;
-    divCart.innerHTML += renderItem;
+    cartContent += renderItem;
   });
+
+  divCart1.innerHTML = cartContent;
 };
 
-renderCart();
+const renderCart2 = () => {
+  let cartContent = "";
 
-divCart.addEventListener("click", (e) => {
+  cart.forEach((item, index) => {
+    let renderItem = `
+    <div class="flex items-center justify-around">
+      <div class="w-14 h-14">
+        <img src="${item.src}" alt="product" />
+      </div>
+      <div class="text-left">
+      <div class="font-bold text-[20px]">${item.name}</div>
+      <div>Đơn giá: ${item.price}</div>
+      <div>Số lượng: ${item.quantity}</div>
+      <div>Tổng tiền: ${item.price * item.quantity}đ</div>
+      </div>
+      <button class="delete" data-index="${index}">
+        Xoá
+      </button>
+    </div>
+    <hr>
+    `;
+    cartContent += renderItem;
+  });
+
+  divCart2.innerHTML = cartContent;
+};
+
+renderCart1();
+renderCart2();
+
+divCart1.addEventListener("click", (e) => {
   if (e.target.closest(".delete")) {
-    const index = e.target.closest(".delete").getAttribute("data-index");
+    const index = parseInt(
+      e.target.closest(".delete").getAttribute("data-index")
+    );
     cart.splice(index, 1);
     localStorage.setItem("cart", JSON.stringify(cart));
-    renderCart();
+    renderCart1();
+    renderCart2();
+  }
+});
+
+divCart2.addEventListener("click", (e) => {
+  if (e.target.closest(".delete")) {
+    const index = parseInt(
+      e.target.closest(".delete").getAttribute("data-index")
+    );
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart1();
+    renderCart2();
   }
 });
 

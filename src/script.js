@@ -1,13 +1,13 @@
 const favoriteItems = [
   {
-    scr: "../picture/ruou24.webp",
+    src: "../picture/ruou24.webp",
     name: "Rượu Remy Martin CLUB",
     price: 1230000,
-    ifor: `Dung Tích: 750ml Xuất Sứ: Pháp Với những mùi vị, hương thơm hiếm có như mùi hoa iris, mùi thủy tiên, candies fruit (mùi kẹo), Passion fruit (mùi trái lạc tiên), vị trầm, vị mật ong và nhiều mùi vị khác, rượu...`,
+    infor: `Dung Tích: 750ml Xuất Sứ: Pháp Với những mùi vị, hương thơm hiếm có như mùi hoa iris, mùi thủy tiên, candies fruit (mùi kẹo), Passion fruit (mùi trái lạc tiên), vị trầm, vị mật ong và nhiều mùi vị khác, rượu...`,
   },
 
   {
-    scr: "../picture/3.webp",
+    src: "../picture/3.webp",
     name: "Rượu Luxury Altair Red",
     price: 2338000,
     infor:
@@ -15,7 +15,7 @@ const favoriteItems = [
   },
 
   {
-    scr: "../picture/31.webp",
+    src: "../picture/31.webp",
     name: "Rượu JOHNNIE WALKER BLUE",
     price: 729000,
     infor:
@@ -23,7 +23,7 @@ const favoriteItems = [
   },
 
   {
-    scr: "../picture/19.webp",
+    src: "../picture/19.webp",
     name: "Rượu California Muscat",
     price: 2000000,
     infor:
@@ -35,12 +35,12 @@ const renderFavorite = document.querySelector(".render-favorite");
 
 favoriteItems.forEach((item) => {
   const html = `
-    <div onclick=viewProduct('${item.name}') class="product items bg-white p-4 hover:shadow-2xl w-64 h-150">
+    <div onclick=viewProduct('${item.name}') data-product="${item.name}" class="product items bg-white p-4 hover:shadow-2xl w-64 h-150">
     <div>
-      <img src="${item.scr}" alt="favorite-picture" />
+      <img src="${item.src}" alt="favorite-picture" />
     </div>
     <div class="text-center">
-      <button onclick="addToCart('${item.name}')" class="button-purchase bg-[orange] text-[white] w-32 h-10 rounded-md items-center hover:opacity-50 hidden" image="${item.scr}" name="${item.name}" price="${item.price}">Mua hàng</button>
+      <button onclick="addToCart('${item.name}')" class="button-purchase bg-[orange] text-[white] w-32 h-10 rounded-md items-center hover:opacity-50 hidden" image="${item.src}" name="${item.name}" price="${item.price}">Mua hàng</button>
     </div>
       <div class="text-center">${item.name}</div>
       <div class="text-[orange] text-center">${item.price}đ</div>
@@ -97,11 +97,13 @@ function addToCart(productName) {
 }
 
 function viewProduct(productName) {
-  const view = JSON.parse(localStorage.getItem("view")) || [];
   const productSave = favoriteItems.find((item) => item.name === productName);
   if (productSave) {
-    view.push(productSave);
-    localStorage.setItem("view", JSON.stringify(view));
+    const viewedProducts = JSON.parse(localStorage.getItem("view")) || [];
+    viewedProducts.push(productSave);
+    localStorage.setItem("view", JSON.stringify(viewedProducts));
   }
   window.location = "../product/product.html";
 }
+
+console.log(localStorage.getItem("view"));

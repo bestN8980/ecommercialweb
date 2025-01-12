@@ -15,7 +15,7 @@ const renderCart1 = () => {
   cart.forEach((item, index) => {
     let renderItem = `
       <div class="w-14 h-16">
-        <img src="${item.src}" alt="product" />
+        <img src=".${item.src}" alt="product" />
       </div>
       <div>${item.name}</div>
       <div>${item.price}</div>
@@ -38,7 +38,7 @@ const renderCart2 = () => {
     let renderItem = `
     <div class="flex items-center justify-around">
       <div class="w-14 h-14">
-        <img src="${item.src}" alt="product" />
+        <img src=".${item.src}" alt="product" />
       </div>
       <div class="text-left">
       <div class="font-bold text-[20px]">${item.name}</div>

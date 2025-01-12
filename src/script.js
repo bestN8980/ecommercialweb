@@ -35,7 +35,7 @@ const renderFavorite = document.querySelector(".render-favorite");
 
 favoriteItems.forEach((item) => {
   const html = `
-    <div onclick=viewProduct('${item.name}') data-product="${item.name}" class="product items bg-white p-4 hover:shadow-2xl w-64 h-150">
+    <div ondbclick=viewProduct('${item.name}') data-product="${item.name}" class="product items bg-white p-4 hover:shadow-2xl w-64 h-150">
     <div>
       <img src="${item.src}" alt="favorite-picture" />
     </div>

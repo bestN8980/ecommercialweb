@@ -1,13 +1,13 @@
 const favoriteItems = [
   {
-    src: "../picture/ruou24.webp",
+    src: "./picture/53-min.webp",
     name: "Rượu Remy Martin CLUB",
     price: 1230000,
     infor: `Dung Tích: 750ml Xuất Sứ: Pháp Với những mùi vị, hương thơm hiếm có như mùi hoa iris, mùi thủy tiên, candies fruit (mùi kẹo), Passion fruit (mùi trái lạc tiên), vị trầm, vị mật ong và nhiều mùi vị khác, rượu...`,
   },
 
   {
-    src: "../picture/3.webp",
+    src: "./picture/3.webp",
     name: "Rượu Luxury Altair Red",
     price: 2338000,
     infor:
@@ -15,7 +15,7 @@ const favoriteItems = [
   },
 
   {
-    src: "../picture/31.webp",
+    src: "./picture/31.webp",
     name: "Rượu JOHNNIE WALKER BLUE",
     price: 729000,
     infor:
@@ -23,7 +23,7 @@ const favoriteItems = [
   },
 
   {
-    src: "../picture/19.webp",
+    src: "./picture/19.webp",
     name: "Rượu California Muscat",
     price: 2000000,
     infor:
@@ -103,7 +103,7 @@ function viewProduct(productName) {
     viewedProducts.push(productSave);
     localStorage.setItem("view", JSON.stringify(viewedProducts));
   }
-  window.location = "../product/product.html";
+  window.location = "./product/product.html";
 }
 
 console.log(localStorage.getItem("view"));

@@ -12,7 +12,7 @@ if (view && view.length > 0) {
   const product = view[view.length - 1];
   container.innerHTML += `
     <div class="w-auto">
-      <img src="${product.src}" alt="${product.name}" />
+      <img src=".${product.src}" alt="${product.name}" />
     </div>
     <div>
       <hr />

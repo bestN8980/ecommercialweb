@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products</title>
+    <title>Checkout</title>
     <link href="../../dist/output.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -77,7 +77,21 @@
         >TIN TỨC</a
       >
     </div>
-    <div id="container" class="md:flex justify-center m-8"></div>
-    <script src="product.js"></script>
+    <div class="bg-[orange]">
+      <div class="text-[30px] font-bold ml-20">GIỎ HÀNG</div>
+      <hr />
+      <div
+        class="cart hidden md:grid grid-cols-6 gap-y-8 text-center ml-20 divide-y divide-gray-300"
+      >
+        <div class="">Ảnh</div>
+        <div class="">Tên sản phẩm</div>
+        <div class="">Đơn giá</div>
+        <div class="">Số lượng</div>
+        <div class="">Thành tiền</div>
+        <div class="">Xoá</div>
+      </div>
+      <div class="cart-in-small-screen md:hidden"></div>
+    </div>
+    <script src="./buy.js"></script>
   </body>
 </html>

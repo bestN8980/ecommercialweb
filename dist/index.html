@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products</title>
-    <link href="../../dist/output.css" rel="stylesheet" />
+    <title>Wine Horse</title>
+    <link href="./output.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -46,14 +46,14 @@
           GIỚI THIỆU
         </a>
       </div>
-      <img src="../picture/logo.webp" alt="logo" />
+      <img src="./images/logo.webp" alt="logo" />
       <div class="md:flex hidden">
         <a class="hover-menu mr-5 hover:cursor-pointer hover:text-[orange]">
           SẢN PHẨM >
         </a>
         <a class="mr-5 hover:cursor-pointer hover:text-[orange]">TIN TỨC</a>
       </div>
-      <a href="../checkout/buy.html">
+      <a href="./checkout/buy.html">
         <i
           class="fa-solid fa-bag-shopping text-3xl cursor-pointer hover:text-[orange]"
         ></i>
@@ -77,7 +77,57 @@
         >TIN TỨC</a
       >
     </div>
-    <div id="container" class="md:flex justify-center m-8"></div>
-    <script src="product.js"></script>
+    <img src="./images/slider_1.webp" alt="slider1" />
+    <div class="md:flex justify-center">
+      <img
+        src="./images/banner2_1.webp"
+        alt="banner2_1"
+        class="w-full md:w-auto"
+      />
+      <img
+        src="./images/banner2_2.webp"
+        alt="banner2_2"
+        class="w-full md:w-auto"
+      />
+    </div>
+    <div class="grid grid-cols-1">
+      <div class="text-center pt-[80px] text-[25px]">ĐƯỢC ƯA THÍCH NHẤT</div>
+      <div
+        class="render-favorite ml-36 mr-36 grid grid-cols-1 text-center md:grid-cols-4"
+      ></div>
+    </div>
+    <div
+      class="w-full h-[40px] sm:flex justify-around items-center bg-black text-white"
+    >
+      <div class="text-[25px] font-semibold hidden md:block">GỬI EMAIL</div>
+      <div class="flex">
+        <input
+          type="text"
+          class="h-[35px] w-[300px] border-none outline-none"
+          placeholder="Email của bạn"
+        />
+        <button class="bg-[orange] text-white h-[35px] w-[180px] border-none">
+          GỬI NGAY
+        </button>
+      </div>
+      <div class="flex justify-between">
+        <div class="text-[25px] font-semibold hidden md:block">
+          THEO DÕI CHÚNG TÔI
+        </div>
+        <div class="flex justify-around items-center">
+          <i class="fa-brands fa-twitter text-gray-400 hover:text-[orange]"></i>
+          <i
+            class="fa-brands fa-facebook-f text-gray-400 hover:text-[orange]"
+          ></i>
+          <i
+            class="fa-brands fa-google-plus-g text-gray-400 hover:text-[orange]"
+          ></i>
+          <i
+            class="fa-brands fa-instagram text-gray-400 hover:text-[orange]"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

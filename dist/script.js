@@ -51,11 +51,19 @@ document.querySelectorAll(".items").forEach((item) => {
   item.addEventListener("mouseenter", () => {
     let buyButton = item.querySelector(".button-purchase");
     buyButton.classList.remove("hidden");
+    item.classList.add("bg-black");
+    item.classList.add("bg-opacity-50");
+    item.classList.add("transition");
+    item.classList.add("duration-300");
   });
 
   item.addEventListener("mouseleave", () => {
     let buyButton = item.querySelector(".button-purchase");
     buyButton.classList.add("hidden");
+    item.classList.remove("bg-black");
+    item.classList.remove("bg-opacity-50");
+    item.classList.remove("transition");
+    item.classList.remove("duration-300");
   });
 
   item.addEventListener("click", (e) => {

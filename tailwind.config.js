@@ -4,6 +4,7 @@ module.exports = {
     "./checkout/**/*.{html,js}",
     "./product/**/*.{html,js}",
     "./src/**/*.{html,js}",
+    "./dist/**/*.{html,js}",
   ],
   theme: {
     extend: {},

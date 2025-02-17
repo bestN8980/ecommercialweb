@@ -35,10 +35,10 @@ const renderFavorite = document.querySelector(".render-favorite");
 
 favoriteItems.forEach((item) => {
   const html = `
-          <div onclick="viewProduct('${item.name}')" data-product="${item.name}" class="product items bg-white p-4 hover:shadow-2xl h-[800px] relative">
-            <div class="text-center relative">
+          <div onclick="viewProduct('${item.name}')" data-product="${item.name}" class="product items bg-white p-4 hover:shadow-2xl">
+            <div class="text-center">
               <img src="${item.src}" alt="favorite-images" class="w-full h-auto" />
-              <button onclick="addToCart('${item.name}')" class="button-purchase bg-orange-500 text-white w-32 h-10 rounded-md items-center hover:opacity-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity z-10" image="${item.src}" name="${item.name}" price="${item.price}">Mua hàng</button>
+              <button onclick="addToCart('${item.name}')" class="button-purchase bg-[orange] text-white w-32 h-10 rounded-md items-center hover:opacity-50 hidden absolute l-[50%] translate-x-[-50%] z-10" image="${item.src}" name="${item.name}" price="${item.price}">Mua hàng</button>
             </div>
             <div class="text-center">${item.name}</div>
             <div class="text-orange-500 text-center">${item.price}đ</div>
@@ -50,12 +50,12 @@ favoriteItems.forEach((item) => {
 document.querySelectorAll(".items").forEach((item) => {
   item.addEventListener("mouseenter", () => {
     let buyButton = item.querySelector(".button-purchase");
-    buyButton.style.opacity = "1";
+    buyButton.classList.remove("hidden");
   });
 
   item.addEventListener("mouseleave", () => {
     let buyButton = item.querySelector(".button-purchase");
-    buyButton.style.opacity = "0";
+    buyButton.classList.add("hidden");
   });
 
   item.addEventListener("click", (e) => {

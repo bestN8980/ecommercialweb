@@ -91,3 +91,16 @@ const menu = document.querySelector(".render-menu");
 bar.addEventListener("click", () => {
   menu.classList.toggle("hidden");
 });
+
+const orderButton = document.querySelector("#order");
+
+orderButton.addEventListener("click", () => {
+  alert("BẠN ĐÃ ĐẶT HÀNG THÀNH CÔNG");
+});
+
+const orderForm = document.querySelector("#order-form");
+const purchaseButton = document.querySelector("#open-form");
+
+purchaseButton.addEventListener("click", () => {
+  orderForm.classList.remove("hidden");
+});

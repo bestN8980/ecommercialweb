@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products</title>
+    <title>Đăng ký</title>
     <link href="./output.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -20,12 +20,12 @@
       </div>
       <div class="m-5 flex justify-between items-center w-full md:w-auto">
         <div class="flex">
-          <button class="px-3">
+          <a href="./signup.html" class="px-3">
             <i class="fa-solid fa-lock text-[orange] mr-2"></i>Đăng ký
-          </button>
-          <button class="px-3">
+          </a>
+          <a href="./signin.html" class="px-3">
             <i class="fa-solid fa-user text-[orange] mr-2"></i>Đăng nhập
-          </button>
+          </a>
         </div>
         <div class="ml-auto">
           <button class="px-3">
@@ -53,7 +53,7 @@
         </a>
         <a class="mr-5 hover:cursor-pointer hover:text-[orange]">TIN TỨC</a>
       </div>
-      <a href="../checkout/buy.html">
+      <a href="./checkout.html">
         <i
           class="fa-solid fa-bag-shopping text-3xl cursor-pointer hover:text-[orange]"
         ></i>
@@ -77,7 +77,41 @@
         >TIN TỨC</a
       >
     </div>
-    <div id="container" class="md:flex justify-center m-8"></div>
-    <script src="product.js"></script>
+    <div class="sm:w-1/2 w-full mx-auto h-full border-[4px] rounded-md">
+      <div class="text-center text-[45px] font-semibold">ĐĂNG KÝ TÀI KHOẢN</div>
+      <div class="grid grid-cols-1">
+        <div class="text-[35px]">THÔNG TIN NHẬN HÀNG</div>
+        <input type="text" placeholder="Email" class="w-80 h-8 border-2 my-5" />
+        <input
+          type="text"
+          placeholder="Họ và tên"
+          class="w-80 h-8 border-2 my-5"
+        />
+        <input
+          type="text"
+          placeholder="Số điện thoại"
+          class="w-80 h-8 border-2 my-5"
+        />
+        <input
+          type="text"
+          placeholder="Địa chỉ"
+          class="w-80 h-8 border-2 my-5"
+        />
+        <input
+          type="text"
+          placeholder="Mật khẩu"
+          class="w-80 h-8 border-2 my-5"
+        />
+        <div>
+          <button
+            id="sign-up"
+            class="bg-red-500 rounded-lg w-[130px] h-[40px] hover:opacity-w-80 my-5"
+          >
+            ĐĂNG KÝ
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./signup.js"></script>
   </body>
 </html>

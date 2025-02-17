@@ -20,12 +20,12 @@
       </div>
       <div class="m-5 flex justify-between items-center w-full md:w-auto">
         <div class="flex">
-          <button class="px-3">
+          <a href="./signup.html" class="px-3">
             <i class="fa-solid fa-lock text-[orange] mr-2"></i>Đăng ký
-          </button>
-          <button class="px-3">
+          </a>
+          <a class="px-3">
             <i class="fa-solid fa-user text-[orange] mr-2"></i>Đăng nhập
-          </button>
+          </a>
         </div>
         <div class="ml-auto">
           <button class="px-3">
@@ -46,14 +46,14 @@
           GIỚI THIỆU
         </a>
       </div>
-      <img src="../picture/logo.webp" alt="logo" />
+      <img src="./images/logo.webp" alt="logo" />
       <div class="md:flex hidden">
         <a class="hover-menu mr-5 hover:cursor-pointer hover:text-[orange]">
           SẢN PHẨM >
         </a>
         <a class="mr-5 hover:cursor-pointer hover:text-[orange]">TIN TỨC</a>
       </div>
-      <a href="../checkout/buy.html">
+      <a href="./checkout.html">
         <i
           class="fa-solid fa-bag-shopping text-3xl cursor-pointer hover:text-[orange]"
         ></i>
@@ -92,6 +92,46 @@
       </div>
       <div class="cart-in-small-screen md:hidden"></div>
     </div>
-    <script src="./buy.js"></script>
+    <div class="mt-8">
+      <button
+        id="open-form"
+        class="bg-red-500 rounded-lg w-[130px] h-[40px] hover:opacity-80"
+      >
+        THANH TOÁN
+      </button>
+    </div>
+    <div
+      id="order-form"
+      class="sm:w-1/2 w-fit mx-auto border-2 rounded-lg h-full hidden"
+    >
+      <div class="text-center text-[45px] font-semibold hidden md:block">
+        THANH TOÁN ĐƠN HÀNG
+      </div>
+      <div>
+        <div class="text-[15px]">THÔNG TIN NHẬN HÀNG</div>
+        <input type="text" placeholder="Email" class="w-80 h-8 border-2" />
+        <input type="text" placeholder="Họ và tên" class="w-80 h-8 border-2" />
+        <input
+          type="text"
+          placeholder="Số điện thoại"
+          class="w-80 h-8 border-2"
+        />
+        <input type="text" placeholder="Địa chỉ" class="w-80 h-8 border-2" />
+        <textarea
+          rows="3"
+          placeholder="Ghi chú(tuỳ chọn)"
+          class="w-80 border-2"
+        ></textarea>
+        <div>
+          <button
+            id="order"
+            class="bg-red-500 rounded-lg w-[130px] h-[40px] hover:opacity-80"
+          >
+            ĐẶT HÀNG
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./checkout.js"></script>
   </body>
 </html>

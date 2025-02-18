@@ -42,7 +42,12 @@
       </button>
       <img src="./images/logo.webp" alt="logo" />
       <div class="md:flex hidden">
-        <a class="mr-5 hover:cursor-pointer hover:text-[orange]"> TRANG CHỦ </a>
+        <a
+          href="./index.html"
+          class="mr-5 hover:cursor-pointer hover:text-[orange]"
+        >
+          TRANG CHỦ
+        </a>
         <a class="mr-5 hover:cursor-pointer hover:text-[orange]">
           GIỚI THIỆU
         </a>
@@ -60,7 +65,7 @@
         ></i>
       </a>
     </div>
-    <div class="render-menu border-2 hidden">
+    <div class="render-menu border-2 hidden sm:hidden">
       <a
         class="text-[20px] ml-10 hover:text-[orange] block hover:cursor-pointer"
         >TRANG CHỦ</a
@@ -100,38 +105,6 @@
       >
         THANH TOÁN
       </button>
-    </div>
-    <div
-      id="order-form"
-      class="sm:w-1/2 w-fit mx-auto border-2 rounded-lg h-full hidden"
-    >
-      <div class="text-center text-[45px] font-semibold hidden md:block">
-        THANH TOÁN ĐƠN HÀNG
-      </div>
-      <div>
-        <div class="text-[15px]">THÔNG TIN NHẬN HÀNG</div>
-        <input type="text" placeholder="Email" class="w-80 h-8 border-2" />
-        <input type="text" placeholder="Họ và tên" class="w-80 h-8 border-2" />
-        <input
-          type="text"
-          placeholder="Số điện thoại"
-          class="w-80 h-8 border-2"
-        />
-        <input type="text" placeholder="Địa chỉ" class="w-80 h-8 border-2" />
-        <textarea
-          rows="3"
-          placeholder="Ghi chú(tuỳ chọn)"
-          class="w-80 border-2"
-        ></textarea>
-        <div>
-          <button
-            id="order"
-            class="bg-red-500 rounded-lg w-[130px] h-[40px] hover:opacity-80"
-          >
-            ĐẶT HÀNG
-          </button>
-        </div>
-      </div>
     </div>
     <script src="./checkout.js"></script>
   </body>

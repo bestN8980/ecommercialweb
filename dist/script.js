@@ -35,10 +35,10 @@ const renderFavorite = document.querySelector(".render-favorite");
 
 favoriteItems.forEach((item) => {
   const html = `
-          <div onclick="viewProduct('${item.name}')" data-product="${item.name}" class="product items bg-white p-4 hover:shadow-2xl">
-            <div class="text-center">
+          <div onclick="viewProduct('${item.name}')" data-product="${item.name}" class="product bg-white p-4 shadow-md relative hover:bg-black hover:bg-opacity-50 transition duration-300 rounded-lg group">
+            <div class="text-center relative">
               <img src="${item.src}" alt="favorite-images" class="w-full h-auto" />
-              <button onclick="addToCart('${item.name}')" class="button-purchase bg-[orange] text-white w-32 h-10 rounded-md items-center hover:opacity-50 hidden absolute l-[50%] translate-x-[-50%] z-10" image="${item.src}" name="${item.name}" price="${item.price}">Mua hàng</button>
+              <button onclick="addToCart('${item.name}')" class="button-purchase bg-orange-500 hover:bg-orange-700 text-white w-32 h-10 rounded-md flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" image="${item.src}" name="${item.name}" price="${item.price}">Mua hàng</button>
             </div>
             <div class="text-center">${item.name}</div>
             <div class="text-orange-500 text-center">${item.price}đ</div>
@@ -47,25 +47,7 @@ favoriteItems.forEach((item) => {
   renderFavorite.innerHTML += html;
 });
 
-document.querySelectorAll(".items").forEach((item) => {
-  item.addEventListener("mouseenter", () => {
-    let buyButton = item.querySelector(".button-purchase");
-    buyButton.classList.remove("hidden");
-    item.classList.add("bg-black");
-    item.classList.add("bg-opacity-50");
-    item.classList.add("transition");
-    item.classList.add("duration-300");
-  });
-
-  item.addEventListener("mouseleave", () => {
-    let buyButton = item.querySelector(".button-purchase");
-    buyButton.classList.add("hidden");
-    item.classList.remove("bg-black");
-    item.classList.remove("bg-opacity-50");
-    item.classList.remove("transition");
-    item.classList.remove("duration-300");
-  });
-
+document.querySelectorAll(".product").forEach((item) => {
   item.addEventListener("click", (e) => {
     const productName = item.getAttribute("data-product");
     viewProduct(productName);

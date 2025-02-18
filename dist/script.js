@@ -94,4 +94,29 @@ function viewProduct(productName) {
   window.location = "./product.html";
 }
 
-console.log(localStorage.getItem("view"));
+const searchBar = document.querySelector("#search");
+const searchGlass = document.querySelector("#glass");
+
+searchGlass.addEventListener("click", () => {
+  searchBar.classList.toggle("hidden");
+});
+
+function searchProduct() {
+  let key = document.getElementById("search").value.trim().toLowerCase();
+
+  if (key !== "") {
+    const filteredItems = favoriteItems.filter((item) =>
+      item.name.toLowerCase().includes(key)
+    );
+
+    localStorage.setItem("searchResults", JSON.stringify(filteredItems));
+
+    window.location.href = "search.html";
+  }
+}
+
+document.getElementById("search").addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    searchProduct();
+  }
+});

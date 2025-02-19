@@ -7,7 +7,11 @@ module.exports = {
     "./dist/**/*.{html,js}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: ['"Times New Roman"', "Times", "serif"],
+      },
+    },
   },
   plugins: [],
 };

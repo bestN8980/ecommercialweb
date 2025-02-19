@@ -3,31 +3,30 @@ const favoriteItems = [
     src: "./images/53-min.webp",
     name: "Rượu Remy Martin CLUB",
     price: 1230000,
-    infor: `Dung Tích: 750ml Xuất Sứ: Pháp Với những mùi vị, hương thơm hiếm có như mùi hoa iris, mùi thủy tiên, candies fruit (mùi kẹo), Passion fruit (mùi trái lạc tiên), vị trầm, vị mật ong và nhiều mùi vị khác, rượu...`,
+    infor: `<strong>Dung Tích:</strong>750ml<br> 
+    <strong>Xuất Sứ:</strong> Pháp Với những mùi vị, hương thơm hiếm có như mùi hoa iris, mùi thủy tiên, candies fruit (mùi kẹo), Passion fruit (mùi trái lạc tiên), vị trầm, vị mật ong và nhiều mùi vị khác, rượu...`,
   },
 
   {
     src: "./images/3.webp",
     name: "Rượu Luxury Altair Red",
     price: 2338000,
-    infor:
-      "Hãng sản xuất: Sand Pedro & Dassault. Xuất xứ: Thung lũng Alto Cachapoal, Chile. Thành phần: 65% Cabernet sauvignon, 22% Syrah, 7% Carmenere, 5% Cabernet Franc, 1% Petit Verdot Nồng độ: 14.7% Ngâm ủ/Oak aging: ngâm 16 tháng trong thùng Pháp mới nguyên 100% Rượu Luxury...",
+    infor: `<strong>Hãng sản xuất:</strong> Sand Pedro & Dassault.<br> 
+      <strong>Xuất xứ:</strong> Thung lũng Alto Cachapoal, Chile. Thành phần: 65% Cabernet sauvignon, 22% Syrah, 7% Carmenere, 5% Cabernet Franc, 1% Petit Verdot Nồng độ: 14.7% Ngâm ủ/Oak aging: ngâm 16 tháng trong thùng Pháp mới nguyên 100% Rượu Luxury...`,
   },
 
   {
     src: "./images/31.webp",
     name: "Rượu JOHNNIE WALKER BLUE",
     price: 729000,
-    infor:
-      "JOHNNIE WALKER BLUE LABEL  - QUÝ HIẾM TẠO NÊN BLUE TINH TÚY Hương Vị Hiếm Có Bậc Nhất Không phải ngẫu nhiên mà Johnnie Walker Blue Label được coi là một trong những dòng whisky pha trộn được đánh giá cao...",
+    infor: `JOHNNIE WALKER BLUE LABEL  - QUÝ HIẾM TẠO NÊN BLUE TINH TÚY Hương Vị Hiếm Có Bậc Nhất Không phải ngẫu nhiên mà Johnnie Walker Blue Label được coi là một trong những dòng whisky pha trộn được đánh giá cao...`,
   },
 
   {
     src: "./images/19.webp",
     name: "Rượu California Muscat",
     price: 2000000,
-    infor:
-      "Bên trong chai, bạn sẽ tìm thấy một số tốt nhất của California - cho dù đó là một màu trắng, hoặc màu đỏ, cung cấp cho bạn cơ hội để chia sẻ với bạn bè và gia đình lịch...",
+    infor: `Bên trong chai, bạn sẽ tìm thấy một số tốt nhất của California - cho dù đó là một màu trắng, hoặc màu đỏ, cung cấp cho bạn cơ hội để chia sẻ với bạn bè và gia đình lịch...`,
   },
 ];
 

@@ -12,15 +12,16 @@ if (view && view.length > 0) {
   const product = view[view.length - 1];
   container.innerHTML += `
     <div class="w-auto">
-      <img src=".${product.src}" alt="${product.name}" />
+      <img src="${product.src}" alt="${product.name}" />
     </div>
-    <div>
+    <div class="w-auto md:w-[500px]">
       <hr />
       <div class="text-[30px] font-bold">${product.name}</div>
       <hr />
       <div class="text-[20px]">${product.price}đ</div>
       <hr />
-      <p class="text-justify">Mô tả: ${product.infor}</p>
+      <p class="text-justify"><strong>Mô tả:</strong><br> 
+      ${product.infor}</p>
     </div>
   `;
 }
